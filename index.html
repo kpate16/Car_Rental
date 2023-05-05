@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME Car Rental</title>
+    <h1>ACME Car Rental</h1>
+</head>
+
+<body>
+
+
+    <div class="form-group m-3">
+        <div class="input-group">
+            <span class="input-group-text">Pickup date:</span>
+            <input type="text" class="form-control" id="pickupdate" placeholder="Enter date">
+        </div>
+    </div>
+    <br>
+    <div class="form-group m-3">
+        <div class="input-group">
+            <span class="input-group-text">Number of days:</span>
+            <input type="text" class="form-control" id="ndays" placeholder="Enter days">
+        </div>
+    </div>
+    <br>
+    <span class="input-group-text">Options</span>
+    <br>
+    <br>
+
+    <input type="checkbox" id="Electronictolltag" onclick="myFunction()">
+    <label for="Electronictolltag">Electronic Toll Tag($3.95/day)</label><br>
+
+
+    <input type="checkbox" id="gps" onclick="myFunction()">
+    <label for="gps">GPS($2.95/day)</label><br>
+
+    <input type="checkbox" id="roadside" onclick="myFunction()">
+    <label for="roadside">Roadside Assistance($2.95/day)</label><br>
+    <br>
+
+    <span class="input-group-text">Under 25</span> <br>
+
+    <input type="radio" id="no">
+      <label for="no">No</label>
+    <input type="radio" id="yes">
+      <label for="yes">Yes</label><br>
+    <br>
+    <button type="button">Estimate Total Cost </button> <br>
+
+    <span class="input-group-text">Car rental:</span><br>
+    <span style="text-align: center;"></span>
+    <span class="input-group-text">Options:</span><br>
+    <span class="input-group-text">Under 25 surcharge:</span><br>
+    <br>
+    <span class="input-group-text">Total due:</span>
+
+
+    </form>
+
+</body>
+
+</html>
