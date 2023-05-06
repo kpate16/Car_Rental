@@ -2,64 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> -->
     <title>ACME Car Rental</title>
-    <h1>ACME Car Rental</h1>
 </head>
 
 <body>
+    <div class="container">
+        <article data-theme="light"> <!--  card -->
+            <h4>ACME Car Rental</h4>
+            <form id="car-rental-form">
+                <div class="grid"> <!--  row -col -->
+                    <label for="pickupdate"> Pickup Date : </label>
+                    <input type="date" id="pickupdate" name="pickupdate">
+                </div>
+                <div class="grid">
+                    <label for="numberofdays">Number of days:</label>
+                    <input type="number" id="numberofdays" name="numberofdays" placeholder="Number of Days">
+                </div>
+                <div class="grid">
+                    <div>
+                        <fieldset>
+                            <legend>Options : (Car Rental : $29.99)</legend>
+                            <label for="etolltag">
+                                <input type="checkbox" id="etolltag" name="etolltag">
+                                Electronic Toll Tag($3.95/day)
+                            </label>
+                            <label for="gps">
+                                <input type="checkbox" id="gps" name="gps">
+                                GPS($2.95/day)
+                            </label>
+                            <label for="roadsideassist">
+                                <input type="checkbox" id="roadsideassist" name="roadsideassist">
+                                Roadside Assistance($2.95/day)
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend> Under 25:</legend>
+                            <label for="No">
+                                <input type="radio" id="above25" name="size" value="No" checked>
+                                No
+                            </label>
+                            <label for="Yes">
+                                <input type="radio" id="under25" name="size" value="Yes">
+                                Yes
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
 
+                <div class="grid">
+                    <button type="button" class="" id="estimatetotalcost">Estimate total Cost</button>
+                    <button type="reset" id="reset" class="contrast ">reset</button>
+                </div>
 
-    <div class="form-group m-3">
-        <div class="input-group">
-            <span class="input-group-text">Pickup date:</span>
-            <input type="text" class="form-control" id="pickupdate" placeholder="Enter date">
-        </div>
+                <!-- <input id="estimatetotalcost" type="button" value="Estimate total Cost" /> -->
+                <div class="grid">
+                    <div></div>
+                    <div class="">Car rental: <lable id="carrental"></lable>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="grid">
+                    <div></div>
+                    <div class="">Options Cost: <lable id="finaloptions"></lable>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="grid">
+                    <div></div>
+                    <div class="">Under 25 surcharge: <lable id="surcharges"></lable>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="grid">
+                    <div></div>
+                    <div class="">Total due: <lable id="totaldue"></lable>
+                    </div>
+                    <div></div>
+                </div>
+            </form>
+        </article>
     </div>
-    <br>
-    <div class="form-group m-3">
-        <div class="input-group">
-            <span class="input-group-text">Number of days:</span>
-            <input type="text" class="form-control" id="ndays" placeholder="Enter days">
-        </div>
-    </div>
-    <br>
-    <span class="input-group-text">Options</span>
-    <br>
-    <br>
-
-    <input type="checkbox" id="Electronictolltag" onclick="myFunction()">
-    <label for="Electronictolltag">Electronic Toll Tag($3.95/day)</label><br>
-
-
-    <input type="checkbox" id="gps" onclick="myFunction()">
-    <label for="gps">GPS($2.95/day)</label><br>
-
-    <input type="checkbox" id="roadside" onclick="myFunction()">
-    <label for="roadside">Roadside Assistance($2.95/day)</label><br>
-    <br>
-
-    <span class="input-group-text">Under 25</span> <br>
-
-    <input type="radio" id="no">
-      <label for="no">No</label>
-    <input type="radio" id="yes">
-      <label for="yes">Yes</label><br>
-    <br>
-    <button type="button">Estimate Total Cost </button> <br>
-
-    <span class="input-group-text">Car rental:</span><br>
-    <span style="text-align: center;"></span>
-    <span class="input-group-text">Options:</span><br>
-    <span class="input-group-text">Under 25 surcharge:</span><br>
-    <br>
-    <span class="input-group-text">Total due:</span>
-
-
-    </form>
-
 </body>
+<script src="scripts/main.js"></script>
 
 </html>
