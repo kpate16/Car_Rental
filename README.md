@@ -12,7 +12,7 @@ After adding values
 
 
 
-Calculation rent after clicking on Estimate total cost button
+Rent calculation after clicking on Estimate total cost button
 
 ![image](https://user-images.githubusercontent.com/130574523/236637746-78d71ea3-4f3d-4190-8e3b-8cdf7314446f.png)
 
