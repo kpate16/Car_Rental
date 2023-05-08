@@ -3,6 +3,15 @@ function init() {
   document
     .getElementById("estimatetotalcost")
     .addEventListener("click", calculteResults);
+
+  document.getElementById("reset").addEventListener("click", resetForm);
+}
+function resetForm(e) {
+  document.getElementById("carrental").innerHTML = "";
+
+  document.getElementById("finaloptions").innerHTML = "";
+  document.getElementById("surcharges").innerHTML = "";
+  document.getElementById("totaldue").innerHTML = "";
 }
 
 //Result calculations
@@ -13,7 +22,7 @@ function calculteResults(e) {
   const etolltag = document.getElementById("etolltag").checked;
   const gps = document.getElementById("gps").checked;
   const roadsideassist = document.getElementById("roadsideassist").checked;
-  const above25 = document.getElementById("above25").checked;
+  // const above25 = document.getElementById("above25").checked;
   const under25 = document.getElementById("under25").checked;
 
   const carrental = 29.99;
@@ -44,9 +53,11 @@ function calculteResults(e) {
   totaldue = (carrental + finaloptions + surcharges) * numberofdays;
 
   //   Display final Oputput to HTML
-  document.getElementById("carrental").innerHTML = "$" + carrental;
+  document.getElementById("carrental").innerHTML =
+    "$" + carrental * numberofdays;
   document.getElementById("finaloptions").innerHTML =
-    "$" + finaloptions.toFixed(2);
-  document.getElementById("surcharges").innerHTML = "$" + surcharges;
+    "$" + finaloptions.toFixed(2) * numberofdays;
+  document.getElementById("surcharges").innerHTML =
+    "$" + surcharges * numberofdays;
   document.getElementById("totaldue").innerHTML = "$" + totaldue;
 }
